@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 20/10 🐰💗</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  color: #a64d78;
+  background: linear-gradient(135deg, #ffe4ef, #f5e8ff, #fff1f5);
+}
+
+.card {
+  width: 100%;
+  max-width: 440px;
+  padding: 28px 22px;
+  text-align: center;
+  background: rgba(255,255,255,.88);
+  border: 3px solid white;
+  border-radius: 32px;
+  box-shadow: 0 12px 40px #dc9aba55;
+  position: relative;
+}
+
+.sticker {
+  font-size: 27px;
+  letter-spacing: 5px;
+}
+
+.bunny {
+  font-size: 75px;
+  margin: 8px 0;
+  animation: bounce 2s infinite;
+}
+
+.date {
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: #d27ba2;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: clamp(25px, 7vw, 34px);
+  margin: 12px 0;
+  color: #e36e9f;
+}
+
+.subtitle {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.name {
+  color: #d94e91;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.open-btn {
+  margin: 14px 0;
+  padding: 15px 22px;
+  width: 100%;
+  border: 0;
+  border-radius: 20px;
+  color: #a34070;
+  font-size: 16px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ffc4dc, #f7cfff);
+  box-shadow: 0 5px 0 #e9a2c8;
+  transition: transform .2s;
+}
+
+.open-btn:hover {
+  transform: translateY(-3px);
+}
+
+#letter {
+  display: none;
+  padding: 19px 15px;
+  border-radius: 22px;
+  background: #fff1f7;
+  border: 2px dashed #f2afd0;
+  animation: appear .5s ease;
+}
+
+#letter.show {
+  display: block;
+}
+
+#letter h2 {
+  color: #e16b9f;
+  font-size: 23px;
+}
+
+#letter p {
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.signature {
+  font-weight: bold;
+  color: #ce6197;
+}
+
+.footer {
+  margin-top: 22px;
+  font-size: 12px;
+  color: #c58ba9;
+}
+
+.floating {
+  position: fixed;
+  bottom: -40px;
+  pointer-events: none;
+  z-index: 10;
+  animation: fly 4.5s linear forwards;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-9px) rotate(3deg); }
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: scale(.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fly {
+  to {
+    transform: translateY(-115vh) rotate(35deg);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+  }
+}
+</style>
+</head>
+
+<body>
+<main class="card">
+  <div class="sticker">🌷 ✨ 🎀 ✨ 🌷</div>
+
+  <div class="bunny">🐰</div>
+
+  <div class="date">20 . 10 . 2026</div>
+
+  <h1>Happy Women's Day!</h1>
+
+  <p class="subtitle">
+    He lu he lu~ 💗<br>
+    Có một món quà bé xinh dành riêng cho
+  </p>
+
+  <div class="name" id="friendName">cậu bạn đáng yêu</div>
+
+  <p class="subtitle">
+    Đoán xem bên trong có gì nàooo? 👀
+  </p>
+
+  <button class="open-btn" id="openBtn" onclick="openLetter()">
+    💌 Mở thư bí mật nè!
+  </button>
+
+  <section id="letter">
+    <div style="font-size:36px">🐰💐💗</div>
+
+    <h2>Chúc mừng 20/10!</h2>
+
+    <p id="personalMessage"></p>
+
+    <p>
+      Chúc cậu lúc nào cũng vui như trúng số,
+      may mắn như được nghỉ học bất ngờ 😂💖
+      và ngày nào cũng có thật nhiều chuyện vui để kể!
+    </p>
+
+    <p>
+      Mong mọi điều dễ thương nhất trên thế giới
+      đều tìm đến cậu nhaaa 🌷
+    </p>
+
+    <p class="signature">
+      Mãi vui vẻ, mãi đáng yêu nhé! 🫶
+    </p>
+
+    <div style="font-size:27px">🎀 🐇 🍓 💕</div>
+  </section>
+
+  <div class="footer">
+    Made with ♡ and a little bit of cuteness<br>
+    ✧･ﾟ: *✧･ﾟ:*  *:･ﾟ✧*:･ﾟ✧
+  </div>
+</main>
+
+<script>
+const friends = {
+  "thaomy": {
+    name: "Thảo My 🌷",
+    message:
+      "Thảo My ơiiii! Chúc cậu có một ngày 20/10 thật vui, luôn cười thật nhiều và gặp toàn chuyện tốt lành nha! Cảm ơn cậu vì đã là một người bạn đáng quý. Nhớ luôn vui vẻ và giữ nụ cười siêu đáng yêu đó nhéee! 💗🐰"
+  },
+
+  "linhdan": {
+    name: "Linh Đan 🎀",
+    message:
+      "Linh Đan ơiiii! Chúc cậu 20/10 ngập tràn niềm vui, học hành thuận lợi, ăn ngon ngủ ngon và lúc nào cũng gặp may mắn nha! Chúc cậu ngày càng vui vẻ, đáng yêu và có thật nhiều kỷ niệm đẹp cùng bạn bè nèee! 💕🐇"
+  }
+};
+
+const params = new URLSearchParams(window.location.search);
+const recipient = (params.get("to") || "thaomy").toLowerCase();
+const friend = friends[recipient] || friends["thaomy"];
+
+document.getElementById("friendName").textContent = friend.name;
+document.getElementById("personalMessage").textContent =
+  friend.message;
+
+function openLetter() {
+  const letter = document.getElementById("letter");
+  const button = document.getElementById("openBtn");
+
+  letter.classList.add("show");
+  button.textContent = "💖 Thư được mở rồi nè!";
+
+  button.disabled = true;
+  button.style.opacity = "0.8";
+
+  const stickers = ["💗", "💕", "🌸", "✨", "🐰", "🎀", "💖"];
+
+  for (let i = 0; i < 28; i++) {
+    setTimeout(() => {
+      const item = document.createElement("span");
+
+      item.className = "floating";
+      item.textContent =
+        stickers[Math.floor(Math.random() * stickers.length)];
+
+      item.style.left = Math.random() * 95 + "vw";
+      item.style.fontSize = (18 + Math.random() * 18) + "px";
+
+      document.body.appendChild(item);
+
+      setTimeout(() => item.remove(), 4600);
+    }, i * 90);
+  }
+}
+</script>
+</body>
+</html>
